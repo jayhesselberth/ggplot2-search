@@ -1,8 +1,8 @@
 url: http://ggplot2-search.netlify.com
 
 template:
-  package: tidytemplate
-  default_assets: false
+  # package: tidytemplate
+  # default_assets: false
   params:
     docsearch:
       app_id: TK8WB6UEB2
