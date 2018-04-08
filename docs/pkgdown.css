@@ -221,8 +221,8 @@ a.sourceLine:hover {
 /* Docsearch -------------------------------------------------------------- */
 
 div.ds-dataset-1 {
-  overflow: auto;
-  max-height: 80vh;
+  overflow: auto!important;
+  max-height: 80vh!important;
 }
 
 .algolia-autocomplete {
