@@ -239,7 +239,7 @@ div.ds-dataset-1 {
   padding: .75rem 0!important;
   background-color: #fff!important;
   background-clip: padding-box!important;
-  border: 3px solid rgba(0, 0, 0, .1)!important;
+  border: 1px solid rgba(0, 0, 0, .1)!important;
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .175)!important;
 }
 
