@@ -146,10 +146,11 @@ to a grid before visualising." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>2d contours of a 3d surface</h1>
-    <small>Source: <a href='https://github.com/tidyverse/ggplot2/blob/master/R/geom-contour.r'><code>R/geom-contour.r</code></a>, <a href='https://github.com/tidyverse/ggplot2/blob/master/R/stat-contour.r'><code>R/stat-contour.r</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/tidyverse/ggplot2/blob/master/R/geom-contour.r'><code>R/geom-contour.r</code></a>, <a href='https://github.com/tidyverse/ggplot2/blob/master/R/stat-contour.r'><code>R/stat-contour.r</code></a></small>
     <div class="hidden name"><code>geom_contour.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p>ggplot2 can not draw true 3d surfaces, but you can use <code>geom_contour</code>
 and <code><a href='geom_tile.html'>geom_tile()</a></code> to visualise 3d surfaces in 2d. To be a valid
@@ -159,6 +160,7 @@ tends to work best when <code>x</code> and <code>y</code> form a (roughly) evenl
 spaced grid. If your data is not evenly spaced, you may want to interpolate
 to a grid before visualising.</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>geom_contour</span>(<span class='kw'>mapping</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>stat</span> <span class='kw'>=</span> <span class='st'>"contour"</span>,
   <span class='kw'>position</span> <span class='kw'>=</span> <span class='st'>"identity"</span>, <span class='no'>...</span>, <span class='kw'>lineend</span> <span class='kw'>=</span> <span class='st'>"butt"</span>, <span class='kw'>linejoin</span> <span class='kw'>=</span> <span class='st'>"round"</span>,
@@ -322,10 +324,10 @@ the default plot specification, e.g. <code><a href='borders.html'>borders()</a><
 <script>
   docsearch({
     appId: 'TK8WB6UEB2',
+    debug: true,
     apiKey: 'c871e0fb692cad1373a189fc7fe65300',
     indexName: 'ggplot2-search',
-    inputSelector: 'input#search-input.form-control',
-    debug: true // Set debug to true if you want to inspect the dropdown
+    inputSelector: 'input#search-input.form-control'
   });
 </script>
 

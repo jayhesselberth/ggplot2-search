@@ -145,10 +145,11 @@ smaller areas closer to the equator." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Map projections</h1>
-    <small>Source: <a href='https://github.com/tidyverse/ggplot2/blob/master/R/coord-map.r'><code>R/coord-map.r</code></a>, <a href='https://github.com/tidyverse/ggplot2/blob/master/R/coord-quickmap.R'><code>R/coord-quickmap.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/tidyverse/ggplot2/blob/master/R/coord-map.r'><code>R/coord-map.r</code></a>, <a href='https://github.com/tidyverse/ggplot2/blob/master/R/coord-quickmap.R'><code>R/coord-quickmap.R</code></a></small>
     <div class="hidden name"><code>coord_map.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p><code>coord_map</code> projects a portion of the earth, which is approximately
 spherical, onto a flat 2D plane using any projection defined by the
@@ -157,6 +158,7 @@ lines, so this requires considerable computation. <code>coord_quickmap</code> is
 quick approximation that does preserve straight lines. It works best for
 smaller areas closer to the equator.</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>coord_map</span>(<span class='kw'>projection</span> <span class='kw'>=</span> <span class='st'>"mercator"</span>, <span class='no'>...</span>, <span class='kw'>parameters</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>orientation</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>xlim</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>ylim</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)
@@ -297,10 +299,10 @@ plots like <code><a href='geom_tile.html'>geom_tile()</a></code>) at the expense
 <script>
   docsearch({
     appId: 'TK8WB6UEB2',
+    debug: true,
     apiKey: 'c871e0fb692cad1373a189fc7fe65300',
     indexName: 'ggplot2-search',
-    inputSelector: 'input#search-input.form-control',
-    debug: true // Set debug to true if you want to inspect the dropdown
+    inputSelector: 'input#search-input.form-control'
   });
 </script>
 

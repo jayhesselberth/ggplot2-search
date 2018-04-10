@@ -144,10 +144,11 @@ or mappings)." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Annotation: Custom grob</h1>
-    <small>Source: <a href='https://github.com/tidyverse/ggplot2/blob/master/R/annotation-custom.r'><code>R/annotation-custom.r</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/tidyverse/ggplot2/blob/master/R/annotation-custom.r'><code>R/annotation-custom.r</code></a></small>
     <div class="hidden name"><code>annotation_custom.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p>This is a special geom intended for use as static annotations
 that are the same in every panel. These annotations will not
@@ -155,6 +156,7 @@ affect scales (i.e. the x and y axes will not grow to cover the range
 of the grob, and the grob will not be modified by any ggplot settings
 or mappings).</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>annotation_custom</span>(<span class='no'>grob</span>, <span class='kw'>xmin</span> <span class='kw'>=</span> -<span class='fl'>Inf</span>, <span class='kw'>xmax</span> <span class='kw'>=</span> <span class='fl'>Inf</span>, <span class='kw'>ymin</span> <span class='kw'>=</span> -<span class='fl'>Inf</span>,
   <span class='kw'>ymax</span> <span class='kw'>=</span> <span class='fl'>Inf</span>)</pre>
@@ -242,10 +244,10 @@ Inf values can be used to fill the full plot panel (see examples).</p>
 <script>
   docsearch({
     appId: 'TK8WB6UEB2',
+    debug: true,
     apiKey: 'c871e0fb692cad1373a189fc7fe65300',
     indexName: 'ggplot2-search',
-    inputSelector: 'input#search-input.form-control',
-    debug: true // Set debug to true if you want to inspect the dropdown
+    inputSelector: 'input#search-input.form-control'
   });
 </script>
 

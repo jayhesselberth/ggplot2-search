@@ -145,10 +145,11 @@ performance special case for when all the tiles are the same size." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Rectangles</h1>
-    <small>Source: <a href='https://github.com/tidyverse/ggplot2/blob/master/R/geom-raster.r'><code>R/geom-raster.r</code></a>, <a href='https://github.com/tidyverse/ggplot2/blob/master/R/geom-rect.r'><code>R/geom-rect.r</code></a>, <a href='https://github.com/tidyverse/ggplot2/blob/master/R/geom-tile.r'><code>R/geom-tile.r</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/tidyverse/ggplot2/blob/master/R/geom-raster.r'><code>R/geom-raster.r</code></a>, <a href='https://github.com/tidyverse/ggplot2/blob/master/R/geom-rect.r'><code>R/geom-rect.r</code></a>, <a href='https://github.com/tidyverse/ggplot2/blob/master/R/geom-tile.r'><code>R/geom-tile.r</code></a></small>
     <div class="hidden name"><code>geom_tile.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p><code>geom_rect</code> and <code>geom_tile</code> do the same thing, but are
 parameterised differently: <code>geom_rect</code> uses the locations of the four
@@ -157,6 +158,7 @@ corners (<code>xmin</code>, <code>xmax</code>, <code>ymin</code> and <code>ymax<
 <code>y</code>, <code>width</code>, <code>height</code>). <code>geom_raster</code> is a high
 performance special case for when all the tiles are the same size.</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>geom_raster</span>(<span class='kw'>mapping</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>stat</span> <span class='kw'>=</span> <span class='st'>"identity"</span>,
   <span class='kw'>position</span> <span class='kw'>=</span> <span class='st'>"identity"</span>, <span class='no'>...</span>, <span class='kw'>hjust</span> <span class='kw'>=</span> <span class='fl'>0.5</span>, <span class='kw'>vjust</span> <span class='kw'>=</span> <span class='fl'>0.5</span>,
@@ -320,10 +322,10 @@ the default plot specification, e.g. <code><a href='borders.html'>borders()</a><
 <script>
   docsearch({
     appId: 'TK8WB6UEB2',
+    debug: true,
     apiKey: 'c871e0fb692cad1373a189fc7fe65300',
     indexName: 'ggplot2-search',
-    inputSelector: 'input#search-input.form-control',
-    debug: true // Set debug to true if you want to inspect the dropdown
+    inputSelector: 'input#search-input.form-control'
   });
 </script>
 

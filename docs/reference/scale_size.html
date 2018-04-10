@@ -144,10 +144,11 @@ to a size of 0." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Scales for area or radius</h1>
-    <small>Source: <a href='https://github.com/tidyverse/ggplot2/blob/master/R/scale-size.r'><code>R/scale-size.r</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/tidyverse/ggplot2/blob/master/R/scale-size.r'><code>R/scale-size.r</code></a></small>
     <div class="hidden name"><code>scale_size.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p><code>scale_size</code> scales area, <code>scale_radius</code> scales radius. The size
 aesthetic is most commonly used for points and text, and humans perceive
@@ -155,6 +156,7 @@ the area of points (not their radius), so this provides for optimal
 perception. <code>scale_size_area</code> ensures that a value of 0 is mapped
 to a size of 0.</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>scale_radius</span>(<span class='kw'>name</span> <span class='kw'>=</span> <span class='fu'><a href='waiver.html'>waiver</a></span>(), <span class='kw'>breaks</span> <span class='kw'>=</span> <span class='fu'><a href='waiver.html'>waiver</a></span>(), <span class='kw'>labels</span> <span class='kw'>=</span> <span class='fu'><a href='waiver.html'>waiver</a></span>(),
   <span class='kw'>limits</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>range</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>1</span>, <span class='fl'>6</span>), <span class='kw'>trans</span> <span class='kw'>=</span> <span class='st'>"identity"</span>, <span class='kw'>guide</span> <span class='kw'>=</span> <span class='st'>"legend"</span>)
@@ -339,10 +341,10 @@ to points with size 0.</p></div>
 <script>
   docsearch({
     appId: 'TK8WB6UEB2',
+    debug: true,
     apiKey: 'c871e0fb692cad1373a189fc7fe65300',
     indexName: 'ggplot2-search',
-    inputSelector: 'input#search-input.form-control',
-    debug: true // Set debug to true if you want to inspect the dropdown
+    inputSelector: 'input#search-input.form-control'
   });
 </script>
 

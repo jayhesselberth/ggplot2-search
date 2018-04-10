@@ -144,10 +144,11 @@ line separated with commas, or each on their own line." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Useful labeller functions</h1>
-    <small>Source: <a href='https://github.com/tidyverse/ggplot2/blob/master/R/labeller.r'><code>R/labeller.r</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/tidyverse/ggplot2/blob/master/R/labeller.r'><code>R/labeller.r</code></a></small>
     <div class="hidden name"><code>labellers.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p>Labeller functions are in charge of formatting the strip labels of
 facet grids and wraps. Most of them accept a <code>multi_line</code>
@@ -155,6 +156,7 @@ argument to control whether multiple factors (defined in formulae
 such as <code>~first + second</code>) should be displayed on a single
 line separated with commas, or each on their own line.</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>label_value</span>(<span class='no'>labels</span>, <span class='kw'>multi_line</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
 
@@ -290,10 +292,10 @@ function must have the <code>labeller</code> S3 class.</p>
 <script>
   docsearch({
     appId: 'TK8WB6UEB2',
+    debug: true,
     apiKey: 'c871e0fb692cad1373a189fc7fe65300',
     indexName: 'ggplot2-search',
-    inputSelector: 'input#search-input.form-control',
-    debug: true // Set debug to true if you want to inspect the dropdown
+    inputSelector: 'input#search-input.form-control'
   });
 </script>
 

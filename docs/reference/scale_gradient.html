@@ -142,15 +142,17 @@ scale_*_gradientn creats a n-colour gradient." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Gradient colour scales</h1>
-    <small>Source: <a href='https://github.com/tidyverse/ggplot2/blob/master/R/scale-gradient.r'><code>R/scale-gradient.r</code></a>, <a href='https://github.com/tidyverse/ggplot2/blob/master/R/zxx.r'><code>R/zxx.r</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/tidyverse/ggplot2/blob/master/R/scale-gradient.r'><code>R/scale-gradient.r</code></a>, <a href='https://github.com/tidyverse/ggplot2/blob/master/R/zxx.r'><code>R/zxx.r</code></a></small>
     <div class="hidden name"><code>scale_gradient.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p><code>scale_*_gradient</code> creates a two colour gradient (low-high),
 <code>scale_*_gradient2</code> creates a diverging colour gradient (low-mid-high),
 <code>scale_*_gradientn</code> creats a n-colour gradient.</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>scale_colour_gradient</span>(<span class='no'>...</span>, <span class='kw'>low</span> <span class='kw'>=</span> <span class='st'>"#132B43"</span>, <span class='kw'>high</span> <span class='kw'>=</span> <span class='st'>"#56B1F7"</span>,
   <span class='kw'>space</span> <span class='kw'>=</span> <span class='st'>"Lab"</span>, <span class='kw'>na.value</span> <span class='kw'>=</span> <span class='st'>"grey50"</span>, <span class='kw'>guide</span> <span class='kw'>=</span> <span class='st'>"colourbar"</span>)
@@ -322,13 +324,13 @@ palette</p>
 <span class='co'># Equivalent fill scales do the same job for the fill aesthetic</span>
 <span class='fu'><a href='ggplot.html'>ggplot</a></span>(<span class='no'>faithfuld</span>, <span class='fu'><a href='aes.html'>aes</a></span>(<span class='no'>waiting</span>, <span class='no'>eruptions</span>)) +
   <span class='fu'><a href='geom_tile.html'>geom_raster</a></span>(<span class='fu'><a href='aes.html'>aes</a></span>(<span class='kw'>fill</span> <span class='kw'>=</span> <span class='no'>density</span>)) +
-  <span class='fu'>scale_fill_gradientn</span>(<span class='kw'>colours</span> <span class='kw'>=</span> <span class='fu'>terrain.colors</span>(<span class='fl'>10</span>))</div><div class='output co'>#&gt; <span class='error'>Error in grid.Call.graphics(C_setviewport, vp, TRUE): non-finite location and/or size for viewport</span></div><div class='img'><img src='scale_gradient-4.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='fu'>scale_fill_gradientn</span>(<span class='kw'>colours</span> <span class='kw'>=</span> <span class='fu'>terrain.colors</span>(<span class='fl'>10</span>))</div><div class='img'><img src='scale_gradient-4.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># Adjust colour choices with low and high</span>
 <span class='fu'><a href='ggplot.html'>ggplot</a></span>(<span class='no'>df</span>, <span class='fu'><a href='aes.html'>aes</a></span>(<span class='no'>x</span>, <span class='no'>y</span>)) +
   <span class='fu'><a href='geom_point.html'>geom_point</a></span>(<span class='fu'><a href='aes.html'>aes</a></span>(<span class='kw'>colour</span> <span class='kw'>=</span> <span class='no'>z2</span>)) +
-  <span class='fu'>scale_colour_gradient</span>(<span class='kw'>low</span> <span class='kw'>=</span> <span class='st'>"white"</span>, <span class='kw'>high</span> <span class='kw'>=</span> <span class='st'>"black"</span>)
-<span class='co'># Avoid red-green colour contrasts because ~10% of men have difficulty</span>
-<span class='co'># seeing them</span></div></pre>
+  <span class='fu'>scale_colour_gradient</span>(<span class='kw'>low</span> <span class='kw'>=</span> <span class='st'>"white"</span>, <span class='kw'>high</span> <span class='kw'>=</span> <span class='st'>"black"</span>)</div><div class='img'><img src='scale_gradient-5.png' alt='' width='700' height='433' /></div><div class='input'># Avoid red-green colour contrasts because ~10% of men have difficulty
+# seeing them
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -362,10 +364,10 @@ palette</p>
 <script>
   docsearch({
     appId: 'TK8WB6UEB2',
+    debug: true,
     apiKey: 'c871e0fb692cad1373a189fc7fe65300',
     indexName: 'ggplot2-search',
-    inputSelector: 'input#search-input.form-control',
-    debug: true // Set debug to true if you want to inspect the dropdown
+    inputSelector: 'input#search-input.form-control'
   });
 </script>
 

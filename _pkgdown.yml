@@ -8,6 +8,7 @@ template:
       app_id: TK8WB6UEB2
       api_key: c871e0fb692cad1373a189fc7fe65300
       index_name: ggplot2-search
+      debug: "true"
 
 home:
   strip_header: true

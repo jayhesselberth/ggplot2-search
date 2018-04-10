@@ -145,10 +145,11 @@ or polygons." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Visualise sf objects</h1>
-    <small>Source: <a href='https://github.com/tidyverse/ggplot2/blob/master/R/sf.R'><code>R/sf.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/tidyverse/ggplot2/blob/master/R/sf.R'><code>R/sf.R</code></a></small>
     <div class="hidden name"><code>ggsf.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p>This set of geom, stat, and coord are used to visualise simple feature (sf)
 objects. For simple plots, you will only need <code>geom_sf</code> as it
@@ -157,6 +158,7 @@ an unusual geom because it will draw different geometric objects depending
 on what simple features are present in the data: you can get points, lines,
 or polygons.</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>stat_sf</span>(<span class='kw'>mapping</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>geom</span> <span class='kw'>=</span> <span class='st'>"rect"</span>,
   <span class='kw'>position</span> <span class='kw'>=</span> <span class='st'>"identity"</span>, <span class='kw'>na.rm</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>show.legend</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
@@ -362,10 +364,10 @@ take it from the first layer that defines a CRS.</p>
 <script>
   docsearch({
     appId: 'TK8WB6UEB2',
+    debug: true,
     apiKey: 'c871e0fb692cad1373a189fc7fe65300',
     indexName: 'ggplot2-search',
-    inputSelector: 'input#search-input.form-control',
-    debug: true // Set debug to true if you want to inspect the dropdown
+    inputSelector: 'input#search-input.form-control'
   });
 </script>
 

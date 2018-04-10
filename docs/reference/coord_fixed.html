@@ -146,10 +146,11 @@ MASS::eqscplot(), but it works for all types of graphics." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Cartesian coordinates with fixed "aspect ratio"</h1>
-    <small>Source: <a href='https://github.com/tidyverse/ggplot2/blob/master/R/coord-fixed.r'><code>R/coord-fixed.r</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/tidyverse/ggplot2/blob/master/R/coord-fixed.r'><code>R/coord-fixed.r</code></a></small>
     <div class="hidden name"><code>coord_fixed.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p>A fixed scale coordinate system forces a specified ratio between the
 physical representation of data units on the axes. The ratio represents the
@@ -159,6 +160,7 @@ length as one unit on the y-axis. Ratios higher than one make units on the
 y axis longer than units on the x-axis, and vice versa. This is similar to
 <code><a href='http://www.rdocumentation.org/packages/MASS/topics/eqscplot'>MASS::eqscplot()</a></code>, but it works for all types of graphics.</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>coord_fixed</span>(<span class='kw'>ratio</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>xlim</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>ylim</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>expand</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
     
@@ -223,10 +225,10 @@ limits are taken exactly from the data or <code>xlim</code>/<code>ylim</code>.</
 <script>
   docsearch({
     appId: 'TK8WB6UEB2',
+    debug: true,
     apiKey: 'c871e0fb692cad1373a189fc7fe65300',
     indexName: 'ggplot2-search',
-    inputSelector: 'input#search-input.form-control',
-    debug: true // Set debug to true if you want to inspect the dropdown
+    inputSelector: 'input#search-input.form-control'
   });
 </script>
 

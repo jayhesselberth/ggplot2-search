@@ -145,10 +145,11 @@ across the levels of a categorical variable." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Histograms and frequency polygons</h1>
-    <small>Source: <a href='https://github.com/tidyverse/ggplot2/blob/master/R/geom-freqpoly.r'><code>R/geom-freqpoly.r</code></a>, <a href='https://github.com/tidyverse/ggplot2/blob/master/R/geom-histogram.r'><code>R/geom-histogram.r</code></a>, <a href='https://github.com/tidyverse/ggplot2/blob/master/R/stat-bin.r'><code>R/stat-bin.r</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/tidyverse/ggplot2/blob/master/R/geom-freqpoly.r'><code>R/geom-freqpoly.r</code></a>, <a href='https://github.com/tidyverse/ggplot2/blob/master/R/geom-histogram.r'><code>R/geom-histogram.r</code></a>, <a href='https://github.com/tidyverse/ggplot2/blob/master/R/stat-bin.r'><code>R/stat-bin.r</code></a></small>
     <div class="hidden name"><code>geom_histogram.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p>Visualise the distribution of a single continuous variable by dividing
 the x axis into bins and counting the number of observations in each bin.
@@ -157,6 +158,7 @@ polygons (<code>geom_freqpoly</code>), display the counts with lines. Frequency
 polygons are more suitable when you want to compare the distribution
 across the levels of a categorical variable.</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>geom_freqpoly</span>(<span class='kw'>mapping</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>stat</span> <span class='kw'>=</span> <span class='st'>"bin"</span>,
   <span class='kw'>position</span> <span class='kw'>=</span> <span class='st'>"identity"</span>, <span class='no'>...</span>, <span class='kw'>na.rm</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>show.legend</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
@@ -402,10 +404,10 @@ x data, whereas stat_bin is suitable only for continuous x data.</p></div>
 <script>
   docsearch({
     appId: 'TK8WB6UEB2',
+    debug: true,
     apiKey: 'c871e0fb692cad1373a189fc7fe65300',
     indexName: 'ggplot2-search',
-    inputSelector: 'input#search-input.form-control',
-    debug: true // Set debug to true if you want to inspect the dropdown
+    inputSelector: 'input#search-input.form-control'
   });
 </script>
 
