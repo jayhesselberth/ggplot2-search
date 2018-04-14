@@ -208,14 +208,15 @@ is a duplication of the primary axis, effectively mirroring the primary axis.</p
   <span class='fu'><a href='geom_point.html'>geom_point</a></span>()
 
 <span class='co'># Create a simple secondary axis</span>
-<span class='no'>p</span> + <span class='fu'><a href='scale_continuous.html'>scale_y_continuous</a></span>(<span class='kw'>sec.axis</span> <span class='kw'>=</span> <span class='fu'>sec_axis</span>(~<span class='no'>.</span>+<span class='fl'>10</span>))</div><div class='img'><img src='sec_axis-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='no'>p</span> + <span class='fu'><a href='scale_continuous.html'>scale_y_continuous</a></span>(<span class='kw'>sec.axis</span> <span class='kw'>=</span> <span class='fu'>sec_axis</span>(~<span class='no'>.</span>+<span class='fl'>10</span>))</div><div class='output co'>#&gt; <span class='error'>Error in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y,     resolveHJust(x$just, x$hjust), resolveVJust(x$just, x$vjust),     x$rot, 0): polygon edge not found</span></div><div class='img'><img src='sec_axis-1.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># Inherit the name from the primary axis</span>
-<span class='no'>p</span> + <span class='fu'><a href='scale_continuous.html'>scale_y_continuous</a></span>(<span class='st'>"Miles/gallon"</span>, <span class='kw'>sec.axis</span> <span class='kw'>=</span> <span class='fu'>sec_axis</span>(~<span class='no'>.</span>+<span class='fl'>10</span>, <span class='kw'>name</span> <span class='kw'>=</span> <span class='fu'>derive</span>()))</div><div class='img'><img src='sec_axis-2.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='no'>p</span> + <span class='fu'><a href='scale_continuous.html'>scale_y_continuous</a></span>(<span class='st'>"Miles/gallon"</span>, <span class='kw'>sec.axis</span> <span class='kw'>=</span> <span class='fu'>sec_axis</span>(~<span class='no'>.</span>+<span class='fl'>10</span>, <span class='kw'>name</span> <span class='kw'>=</span> <span class='fu'>derive</span>()))
+
 <span class='co'># Duplicate the primary axis</span>
-<span class='no'>p</span> + <span class='fu'><a href='scale_continuous.html'>scale_y_continuous</a></span>(<span class='kw'>sec.axis</span> <span class='kw'>=</span> <span class='fu'>dup_axis</span>())</div><div class='img'><img src='sec_axis-3.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='no'>p</span> + <span class='fu'><a href='scale_continuous.html'>scale_y_continuous</a></span>(<span class='kw'>sec.axis</span> <span class='kw'>=</span> <span class='fu'>dup_axis</span>())
+
 <span class='co'># You can pass in a formula as a shorthand</span>
-<span class='no'>p</span> + <span class='fu'><a href='scale_continuous.html'>scale_y_continuous</a></span>(<span class='kw'>sec.axis</span> <span class='kw'>=</span> ~<span class='no'>.</span>^<span class='fl'>2</span>)</div><div class='img'><img src='sec_axis-4.png' alt='' width='700' height='433' /></div><div class='input'>
-</div></pre>
+<span class='no'>p</span> + <span class='fu'><a href='scale_continuous.html'>scale_y_continuous</a></span>(<span class='kw'>sec.axis</span> <span class='kw'>=</span> ~<span class='no'>.</span>^<span class='fl'>2</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
