@@ -26,6 +26,14 @@ Broken down into construct, build, render and draw times. — benchplot • ggpl
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
+
+
+<!-- docsearch -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<link href="../docsearch.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+
+
 <meta property="og:title" content="Benchmark plot creation time.
 Broken down into construct, build, render and draw times. — benchplot" />
 
@@ -44,11 +52,6 @@ Broken down into construct, build, render and draw times." />
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-
-
-
-<!-- docsearch -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
   </head>
 
@@ -128,7 +131,7 @@ Broken down into construct, build, render and draw times." />
       
       <form class="navbar-form navbar-right" role="search">
         <div class="form-group">
-          <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+          <input type="search" class="form-control" name="search-input" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
         </div>
       </form>
       
@@ -169,11 +172,11 @@ Broken down into construct, build, render and draw times.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>benchplot</span>(<span class='fu'><a href='ggplot.html'>ggplot</a></span>(<span class='no'>mtcars</span>, <span class='fu'><a href='aes.html'>aes</a></span>(<span class='no'>mpg</span>, <span class='no'>wt</span>)) + <span class='fu'><a href='geom_point.html'>geom_point</a></span>())</div><div class='img'><img src='benchplot-1.png' alt='' width='700' height='433' /></div><div class='output co'>#&gt;        step user.self sys.self elapsed
-#&gt; 1 construct     0.002    0.001   0.002
-#&gt; 2     build     0.012    0.000   0.012
-#&gt; 3    render     0.076    0.014   0.118
-#&gt; 4      draw     0.066    0.013   0.101
-#&gt; 5     TOTAL     0.156    0.028   0.233</div><div class='input'><span class='fu'>benchplot</span>(<span class='fu'><a href='ggplot.html'>ggplot</a></span>(<span class='no'>mtcars</span>, <span class='fu'><a href='aes.html'>aes</a></span>(<span class='no'>mpg</span>, <span class='no'>wt</span>)) + <span class='fu'><a href='geom_point.html'>geom_point</a></span>() + <span class='fu'><a href='facet_grid.html'>facet_grid</a></span>(<span class='no'>.</span> ~ <span class='no'>cyl</span>))</div><div class='output co'>#&gt; <span class='error'>Error: 'as_quosures' is not an exported object from 'namespace:rlang'</span></div><div class='output co'>#&gt; <span class='message'>Timing stopped at: 0.265 0.03 0.378</span></div></pre>
+#&gt; 1 construct     0.032    0.006   0.065
+#&gt; 2     build     0.031    0.001   0.031
+#&gt; 3    render     0.036    0.002   0.040
+#&gt; 4      draw     0.072    0.016   0.120
+#&gt; 5     TOTAL     0.171    0.025   0.256</div><div class='input'><span class='fu'>benchplot</span>(<span class='fu'><a href='ggplot.html'>ggplot</a></span>(<span class='no'>mtcars</span>, <span class='fu'><a href='aes.html'>aes</a></span>(<span class='no'>mpg</span>, <span class='no'>wt</span>)) + <span class='fu'><a href='geom_point.html'>geom_point</a></span>() + <span class='fu'><a href='facet_grid.html'>facet_grid</a></span>(<span class='no'>.</span> ~ <span class='no'>cyl</span>))</div><div class='output co'>#&gt; <span class='error'>Error: 'as_quosures' is not an exported object from 'namespace:rlang'</span></div><div class='output co'>#&gt; <span class='message'>Timing stopped at: 0.211 0.028 0.301</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -206,7 +209,13 @@ Broken down into construct, build, render and draw times.</p>
     debug: true,
     apiKey: 'c871e0fb692cad1373a189fc7fe65300',
     indexName: 'ggplot2-search',
-    inputSelector: 'input#search-input.form-control'
+    inputSelector: 'input#search-input.form-control',
+    transformData: function(hits) {
+      return hits.map(function (hit) {
+        hit.url = updateHitURL(hit);
+        return hit;
+      });
+    }
   });
 </script>
 

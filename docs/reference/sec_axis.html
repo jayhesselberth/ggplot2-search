@@ -25,6 +25,14 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
+
+
+<!-- docsearch -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<link href="../docsearch.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+
+
 <meta property="og:title" content="Specify a secondary axis — sec_axis" />
 
 <meta property="og:description" content="This function is used in conjunction with a position scale to create a
@@ -43,11 +51,6 @@ axes must be based on a one-to-one transformation of the primary axes." />
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-
-
-
-<!-- docsearch -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
   </head>
 
@@ -127,7 +130,7 @@ axes must be based on a one-to-one transformation of the primary axes." />
       
       <form class="navbar-form navbar-right" role="search">
         <div class="form-group">
-          <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+          <input type="search" class="form-control" name="search-input" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
         </div>
       </form>
       
@@ -208,15 +211,14 @@ is a duplication of the primary axis, effectively mirroring the primary axis.</p
   <span class='fu'><a href='geom_point.html'>geom_point</a></span>()
 
 <span class='co'># Create a simple secondary axis</span>
-<span class='no'>p</span> + <span class='fu'><a href='scale_continuous.html'>scale_y_continuous</a></span>(<span class='kw'>sec.axis</span> <span class='kw'>=</span> <span class='fu'>sec_axis</span>(~<span class='no'>.</span>+<span class='fl'>10</span>))</div><div class='output co'>#&gt; <span class='error'>Error in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y,     resolveHJust(x$just, x$hjust), resolveVJust(x$just, x$vjust),     x$rot, 0): polygon edge not found</span></div><div class='img'><img src='sec_axis-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='no'>p</span> + <span class='fu'><a href='scale_continuous.html'>scale_y_continuous</a></span>(<span class='kw'>sec.axis</span> <span class='kw'>=</span> <span class='fu'>sec_axis</span>(~<span class='no'>.</span>+<span class='fl'>10</span>))</div><div class='img'><img src='sec_axis-1.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># Inherit the name from the primary axis</span>
-<span class='no'>p</span> + <span class='fu'><a href='scale_continuous.html'>scale_y_continuous</a></span>(<span class='st'>"Miles/gallon"</span>, <span class='kw'>sec.axis</span> <span class='kw'>=</span> <span class='fu'>sec_axis</span>(~<span class='no'>.</span>+<span class='fl'>10</span>, <span class='kw'>name</span> <span class='kw'>=</span> <span class='fu'>derive</span>()))
-
+<span class='no'>p</span> + <span class='fu'><a href='scale_continuous.html'>scale_y_continuous</a></span>(<span class='st'>"Miles/gallon"</span>, <span class='kw'>sec.axis</span> <span class='kw'>=</span> <span class='fu'>sec_axis</span>(~<span class='no'>.</span>+<span class='fl'>10</span>, <span class='kw'>name</span> <span class='kw'>=</span> <span class='fu'>derive</span>()))</div><div class='img'><img src='sec_axis-2.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># Duplicate the primary axis</span>
-<span class='no'>p</span> + <span class='fu'><a href='scale_continuous.html'>scale_y_continuous</a></span>(<span class='kw'>sec.axis</span> <span class='kw'>=</span> <span class='fu'>dup_axis</span>())
-
+<span class='no'>p</span> + <span class='fu'><a href='scale_continuous.html'>scale_y_continuous</a></span>(<span class='kw'>sec.axis</span> <span class='kw'>=</span> <span class='fu'>dup_axis</span>())</div><div class='img'><img src='sec_axis-3.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># You can pass in a formula as a shorthand</span>
-<span class='no'>p</span> + <span class='fu'><a href='scale_continuous.html'>scale_y_continuous</a></span>(<span class='kw'>sec.axis</span> <span class='kw'>=</span> ~<span class='no'>.</span>^<span class='fl'>2</span>)</div></pre>
+<span class='no'>p</span> + <span class='fu'><a href='scale_continuous.html'>scale_y_continuous</a></span>(<span class='kw'>sec.axis</span> <span class='kw'>=</span> ~<span class='no'>.</span>^<span class='fl'>2</span>)</div><div class='img'><img src='sec_axis-4.png' alt='' width='700' height='433' /></div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -251,7 +253,13 @@ is a duplication of the primary axis, effectively mirroring the primary axis.</p
     debug: true,
     apiKey: 'c871e0fb692cad1373a189fc7fe65300',
     indexName: 'ggplot2-search',
-    inputSelector: 'input#search-input.form-control'
+    inputSelector: 'input#search-input.form-control',
+    transformData: function(hits) {
+      return hits.map(function (hit) {
+        hit.url = updateHitURL(hit);
+        return hit;
+      });
+    }
   });
 </script>
 
